@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "skyblock-commands",
+	"version": "${version}",
+	"name": "Skyblock Commands",
+	"description": "Custom command system for Skyblock gameplay with /skyblock prefix commands",
+	"authors": [
+		"Skyblock Team"
+	],
+	"contact": {
+		"homepage": "https://github.com/skyblock/mod",
+		"sources": "https://github.com/skyblock/mod"
+	},
+	"license": "MIT",
+	"icon": "assets/skyblock-commands/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.skyblock.SkyblockMod"
+		],
+		"client": [
+			"com.skyblock.SkyblockModClient"
+		]
+	},
+	"mixins": [
+		"skyblock.mixins.json",
+		{
+			"config": "skyblock.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.8",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
